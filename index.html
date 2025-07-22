@@ -22,133 +22,173 @@
           Calculator App
         </h1>
       </header>
-      <main class="px-4">
-        <section class="w-full max-w-sm">
-          <div class="bg-white shadow-lg rounded-lg p-4">
-            <!-- input angka -->
-            <div class="container mb-5">
-              <input
-                type="number"
-                name=""
-                id=""
-                class="border p-2 w-full rounded-lg"
-                placeholder="Type Your Number...."
-                readonly
-              />
-            </div>
-            <!-- end input angka -->
+      <main class="bg-white shadow-lg p-4">
+        <input
+          id="display"
+          type="text"
+          class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+          disabled
+        />
 
-            <!-- papan angka -->
-            <div class="container">
-              <div class="flex">
-                <button
-                  class="border rounded-tl-lg py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  C
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  %
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  DEL
-                </button>
-                <button
-                  class="border rounded-tr-lg py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  /
-                </button>
-              </div>
-              <div class="flex">
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  7
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  8
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  9
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  X
-                </button>
-              </div>
-              <div class="flex">
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  4
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  5
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  6
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  -
-                </button>
-              </div>
-              <div class="flex">
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  1
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  2
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  3
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  +
-                </button>
-              </div>
-              <div class="flex">
-                <button
-                  class="border rounded-bl-lg py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  0
-                </button>
-                <button
-                  class="border py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  ,
-                </button>
-                <button
-                  class="border rounded-br-lg py-5 flex-1 text-light font-semibold hover:bg-lime-300 hover:text-gray-800"
-                >
-                  =
-                </button>
-              </div>
-            </div>
-            <!-- end papan angka -->
-          </div>
-        </section>
+        <!-- Baris Pertama -->
+        <div class="mt-5 flex justify-around">
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('7')"
+          >
+            7
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('8')"
+          >
+            8
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('9')"
+          >
+            9
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-orange-300 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('/')"
+          >
+            /
+          </button>
+        </div>
+        <!-- End Baris Pertama -->
+
+        <!-- Baris Kedua -->
+        <div class="mt-3 flex justify-around">
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('4')"
+          >
+            4
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('5')"
+          >
+            5
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('6')"
+          >
+            6
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-orange-300 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('*')"
+          >
+            *
+          </button>
+        </div>
+        <!-- End Baris Kedua -->
+
+        <!-- Baris Ketiga -->
+        <div class="mt-3 flex justify-around">
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('1')"
+          >
+            1
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('2')"
+          >
+            2
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('3')"
+          >
+            3
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-orange-300 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('-')"
+          >
+            -
+          </button>
+        </div>
+        <!-- End Baris Ketiga -->
+
+        <!-- Baris Keempat -->
+        <div class="mt-3 flex justify-around">
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl p-5 text-base sm:text-lg font-semibold"
+            onclick="appendValue('0')"
+          >
+            0
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-gray-100 rounded-xl py-5 text-base sm:text-lg font-semibold w-13"
+            onclick="appendValue('.')"
+          >
+            .
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-orange-300 rounded-xl p-5 text-xs sm:text-lg font-semibold"
+            onclick="calculate()"
+          >
+            =
+          </button>
+          <button
+            id="calc-btn"
+            type="button"
+            class="bg-orange-300 rounded-xl py-5 text-base sm:text-lg font-semibold w-12"
+            onclick="appendValue('+')"
+          >
+            +
+          </button>
+        </div>
+        <!-- End Baris Keempat -->
+
+        <!-- Reset -->
+        <div class="mt-3">
+          <button
+            type="button"
+            class="bg-red-600 p-2 rounded-xl w-full text-base sm:text-lg text-gray-100 font-semibold"
+            onclick="clearDisplay()"
+          >
+            Reset
+          </button>
+        </div>
+        <!-- End Reset -->
       </main>
     </div>
     <footer
